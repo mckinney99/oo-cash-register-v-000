@@ -7,7 +7,7 @@ class CashRegister
     @discount = discount.to_f
   end
 
-  def item(title, price, quantity = 1)
+  def add_item(title, price, quantity = 1)
     self.total = total+(price*quantity)
     quantity.times do self.items << title
     end
